@@ -10,7 +10,7 @@ seguintes critérios:
 O programa deve imprimir a faixa etária correspondente.
 */
 import java.util.Scanner;
-class Main 
+class Exercicio1 
 {
     public static void main(String[] args) 
     {
