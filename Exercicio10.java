@@ -14,20 +14,29 @@ class Exercicio10
         System.out.println("Digite a escala de temperatura (C, F ou K): ");
         String escala = sc.nextLine();
         System.out.println("Digite o valor da temperatura: ");
-        double temperatura = sc.nextInt();
+        double temperatura = sc.nextDouble();
         switch(escala)
         {
-            case C:
+            case "C":
             {
-                
+                System.out.println("A temperatura em Celsius é: " + temperatura);
+                System.out.println("A temperatura em Fahrenheit é: " + (temperatura * 9.0 / 5.0 + 32));
+                System.out.println("A temperatura em Kelvin é: " + (temperatura + 273.15));
+                break;
             }
-            case F:
+            case "F":
             {
-                
+                System.out.println("A temperatura em Celsius é: " + ((temperatura - 32) / 1.8));
+                System.out.println("A temperatura em Fahrenheit é: " + temperatura);
+                System.out.println("A temperatura em Kelvin é: " + ((temperatura - 32) * 5.0 / 9.0 + 273.15));
+                break;
             }
-            case K:
+            case "K":
             {
-                
+                System.out.println("A temperatura em Celsius é: " + (temperatura - 273.15));
+                System.out.println("A temperatura em Fahrenheit é: " + ((temperatura - 273.15) * 9.0 / 5.0 + 32));
+                System.out.println("A temperatura em Kelvin é: " + temperatura);
+                break;
             }
         }
     }
