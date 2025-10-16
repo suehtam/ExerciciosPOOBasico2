@@ -30,7 +30,7 @@ class Exercicio12
         {
             System.out.println("Reprovado!");
         }
-        else if(media >= 40 && media <=70)
+        else if(media >= 40 && media <70)
         {
             System.out.println("Final!");
         }
