@@ -18,14 +18,26 @@ class Exercicio13
 {
     public static void main(String[] args) 
     {
+        String secrecao = "";
+        String tosse = "";
+        String dorNoCorpo = "";
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite sua temperatura: ");
         double temperatura = sc.nextDouble();
-        System.out.println("Você está com secreção? S ou N");
-        String secrecao = sc.next();
-        System.out.println("Você está com tosse? S ou N");
-        String tosse = sc.next();
-        System.out.println("Você está com dor no corpo? S ou N");
-        String dorNoCorpo = sc.next();
+        while(!secrecao.equals("S") && !secrecao.equals("N"))
+        {
+            System.out.println("Você está com secreção? S ou N");
+            secrecao = sc.next();
+        }
+        while(tosse != "S" && tosse != "N")
+        {
+            System.out.println("Você está com tosse? S ou N");
+            tosse = sc.next();
+        }
+        while(dorNoCorpo != "S" && dorNoCorpo != "N")
+        {
+            System.out.println("Você está com dor no corpo? S ou N");
+            dorNoCorpo = sc.next();
+        }
     }
 }
