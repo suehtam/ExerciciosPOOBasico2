@@ -28,16 +28,41 @@ class Exercicio13
         {
             System.out.println("Você está com secreção? S ou N");
             secrecao = sc.next();
+            if(!secrecao.equals("S") && !secrecao.equals("N"))
+            {
+                System.out.println("Entrada Inválida");
+            }
         }
-        while(tosse != "S" && tosse != "N")
+        while(!tosse.equals("S") && !tosse.equals("N"))
         {
             System.out.println("Você está com tosse? S ou N");
             tosse = sc.next();
+            if(!tosse.equals("S") && !tosse.equals("N"))
+            {
+                System.out.println("Entrada Inválida");
+            }
         }
-        while(dorNoCorpo != "S" && dorNoCorpo != "N")
+        while(!dorNoCorpo.equals("S") && !dorNoCorpo.equals("N"))
         {
             System.out.println("Você está com dor no corpo? S ou N");
             dorNoCorpo = sc.next();
+            if(!dorNoCorpo.equals("S") && !dorNoCorpo.equals("N"))
+            {
+                System.out.println("Entrada Inválida");
+            }
+        }
+        if(temperatura >= 37 && secrecao.equals("S") && tosse.equals("S") && dorNoCorpo.equals("S"))
+        {
+            System.out.println("Exames Especiais");
+        }
+        else if((temperatura >= 37 && secrecao.equals("N") && tosse.equals("N") && dorNoCorpo.equals("N")) ||
+    (temperatura < 37 && (secrecao.equals("S") || tosse.equals("S") || dorNoCorpo.equals("S"))))
+        {
+            System.out.println("Exames Básicos");
+        }
+        else if(temperatura < 37 && secrecao.equals("N") && tosse.equals("N") && dorNoCorpo.equals("N"))
+        {
+            System.out.println("Liberado");
         }
     }
 }
