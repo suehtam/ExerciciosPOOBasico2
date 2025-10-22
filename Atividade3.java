@@ -9,6 +9,7 @@ public class Main
         double notaProva1 = -1;
         double notaProva2 = -1;
         double notaAtividades= -1;
+        double somaTotal = 0;
         do
         {
             notaProjeto1 = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota do projeto 1: "));
@@ -34,5 +35,6 @@ public class Main
             notaAtividades = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota das atividades: "));
         }
         while(notaAtividades < 0 || notaAtividades > 2);
+        somaTotal = notaProjeto1 + notaProjeto2 + notaProva1 + notaProva2 + notaAtividades;
     }
 }
